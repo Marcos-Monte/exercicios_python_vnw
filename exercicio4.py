@@ -20,3 +20,17 @@ def contar_palavras(frase):
 
 print('4ª Saída: ', contar_palavras(frutas))
 
+# Resolução em aula
+def contar_frequencia_palavras(frase):
+    dicionario = {}
+    lista = frase.split(' ')
+    for item in lista:
+        # Se não existir a chave no dicionario
+        if not item in dicionario.keys():
+            # Adicionar o item ao dicionadio {chave:valor}
+            dicionario[item] = lista.count(item)
+    
+    return dicionario
+
+print('4ª Saída: ', contar_frequencia_palavras(frutas))
+

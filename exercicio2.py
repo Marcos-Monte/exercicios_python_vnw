@@ -8,11 +8,11 @@ Segundo Exercício: Ordenação de Tuplas
     Saída: (“Carol”, “Karynne”, “Kleber”, “Samuel”, “Vinicius”) '''
 
 lista_tuplas = [
-    ('Karynne', 15),
+    ('Karynne', 11),
     ('Samuel', 17),
     ('Carol', 14),
     ('Kleber', 16),
-    ('Vinicius', 18),
+    ('Vinicius', 8),
 ]
 # Não consegui ordenar pela idade, apenas alfabeticamente
 def ordenar_por_idade(lista):
@@ -23,3 +23,12 @@ def ordenar_por_idade(lista):
     return f'2ª Saída: {resultado}'
 
 print(ordenar_por_idade(lista_tuplas))
+
+# Resolução em aula
+def ordenar_tupla(lista_tupla):
+    # sorted ( cria uma nova lista )-> iteravel, key= lambda item_iteravel: item_iteravel[posição dentro do item]
+    lista_ordenada = sorted(lista_tupla, key= lambda tupla: tupla[1])
+    
+    return f'2ª Saída: {lista_ordenada}'
+
+print(ordenar_tupla(lista_tuplas))
