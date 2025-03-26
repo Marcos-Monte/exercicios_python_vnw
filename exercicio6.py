@@ -23,10 +23,29 @@ def combinar_dicionarios(d1, d2):
                 soma = valor_d1 + valor_d2
                 novo_dicionario[chave_d1] = soma
             # Adiciona o valor das diferentes
-            novo_dicionario[chave_d1]= valor_d1
-            novo_dicionario[chave_d2] = valor_d2
+            else:
+                novo_dicionario[chave_d1] = valor_d1
+                novo_dicionario[chave_d2] = valor_d2
     return novo_dicionario
 
 print('6ª Saída: ', combinar_dicionarios(d1, d2))
+
+
+def combinar(dict_1: dict, dict_2: dict):
+    novo_dicionario = {}
+    
+    for chave_dict_1, valor_dict_1 in dict_1.items():
+        
+        for chave_dict_2, valor_dict_2 in dict_2.items():
+            
+            if chave_dict_1 == chave_dict_2:
+                novo_dicionario[chave_dict_1] = valor_dict_1 + valor_dict_2
+            else:
+                novo_dicionario[chave_dict_1] = valor_dict_1
+                novo_dicionario[chave_dict_2] = valor_dict_2
+            
+    return novo_dicionario
+
+print('6ª Saída: ', combinar(d1, d2))
 
 
